@@ -1,0 +1,9 @@
+<section id="contacts" class="row">
+  <header class="col-12">
+    <h2>Contacts</h2>
+    <hr>
+  </header>
+  <app-contact-form class="col-12 col-lg-6 col-lg-6" (newContactSubmitted)="onNewContactSubmitted($event)"></app-contact-form>
+  <hr class="col-12">
+  <app-contact-list class="col-6 col-12" [contacts]="contacts"></app-contact-list>
+</section>

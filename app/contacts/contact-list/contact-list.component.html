@@ -1,0 +1,25 @@
+<section id="contact-list">
+	<ul class="list-group mt-3">
+		<li class="list-group-item bg-light" *ngFor="let contact of contacts">
+			<h4>{{ contact.name.givenName }} {{ contact.name.familyName }}</h4>
+			<h6>Departments</h6>
+			<div *ngFor="let department of contact.departments" class="mt-2">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title text-info">
+							{{ department.name }}
+						</h4>
+						<div class="card-text">
+							<h5>Roles</h5>
+							<ul class="list-group">
+								<li class="list-group-item" *ngFor="let role of department.roles">
+									{{ role.name }}
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</section>
